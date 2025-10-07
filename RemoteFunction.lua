@@ -5,6 +5,7 @@ RemoteFunction.Name = "TheFunction"
 RemoteFunction.Parent = game.ReplicatedStorage
 RemoteFunction.OnServerInvoke = function(plr, backdata)
     print(plr.Name, "has contacted the server")
+    print("server sending data")
   return "OK"
 end
 
@@ -32,5 +33,9 @@ OutputLabel.Parent = player.PlayerGui.ClientUI
 TextButton.Activated:Connect(function() -- When the TextButton is clicked runs the code inside the function
     print("Server Invokation requested")
     local backdata = RemoteFunction:InvokeServer(player)
+    OutputLabel.Text = backdata
+    print("data recieved")
+    wait(3)
+    backdata = "backdata"
     OutputLabel.Text = backdata
 end)
