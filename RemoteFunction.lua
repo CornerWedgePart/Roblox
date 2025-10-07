@@ -1,8 +1,6 @@
 -- client to server, and server to client via remote function
 
-
 -- Server Script
-
 script.Parent = game.ServerScriptService -- Defines where the script should be located
 
 local RemoteFunction = Instance.new("RemoteFunction") -- Summons and defines a new remote function
@@ -14,10 +12,7 @@ RemoteFunction.OnServerInvoke = function(plr) -- Runs a function when the remote
   return "OK" -- The data your sending back to the client
 end
 
-
-
 -- Client Script
-
 script.Parent = game.StarterPlayer.StarterCharacterScripts -- Defines where the script should be located
 
 local RemoteFunction = game.ReplicatedStorage:WaitForChild("TheFunction") -- Defines where to find the function
