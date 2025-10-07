@@ -32,4 +32,4 @@ TextButton.Activated:Connect(function() -- When the TextButton is clicked runs t
 end)
 
 -- Client has power to an extent, it can modify things within its enviroment, but it cannot interfere with any other clients unless given a door to do so.
--- Server has full control over the game and the clients within the game, however it lacks certain capabilities that exploits and normal lua has for safety.
+-- Server has full control over the game and the clients within the game, however it lacks certain capabilities that exploits and normal lua has for safety(RIP LOADSTRING).
