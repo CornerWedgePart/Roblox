@@ -6,7 +6,7 @@ script.Parent = game.ServerScriptService -- Defines where the script should be l
 local RemoteFunction = Instance.new("RemoteFunction") -- Summons and defines a new remote function
 RemoteFunction.Name = "TheFunction" -- Gives the remote function a name
 RemoteFunction.Parent = game.ReplicatedStorage -- Gives the remote function a parent
-RemoteFunction.OnServerInvoke = function(plr) -- Runs a function when the remote function is invoked
+RemoteFunction.OnServerInvoke = function(plr) -- Runs a function when the remote function is invoked OnServerInvoke
     print("Server:", plr.Name, "has contacted the server") -- Says who sent the request
     print("Server: data sent") -- Debug stuff to let us know how the scripts are communicating
   return "OK" -- The data your sending back to the client
@@ -35,7 +35,7 @@ TextButton.Parent = player.PlayerGui.ClientUI -- Sets the TextButtons Parent to 
 OutputLabel.Parent = player.PlayerGui.ClientUI -- Sets the TextLabels Parent to the players gui
 TextButton.Activated:Connect(function() -- When the TextButton is clicked runs the code inside the function
     print("Client: Server Invokation requested") -- Debug to let us know whats going on
-    local backdata = RemoteFunction:InvokeServer(player) -- Best way to explain this is a normal function but with wrapping to catch the return
+    local backdata = RemoteFunction:InvokeServer(player) -- Best way to explain this is a normal function but with wrapping to catch the return and InvokeServer instead of FireServer
     OutputLabel.Text = backdata -- Sets the textlabels text to the return output
     print("Client: data recieved") -- Debug to let us know whats going on
     wait(2) -- a wait before we reset backdata
