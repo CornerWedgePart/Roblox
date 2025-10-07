@@ -1,8 +1,8 @@
 -- Server Script
 local RemoteFunction = Instance.new("RemoteFunction")
-RemoteFunction.Name = TheFunction
+RemoteFunction.Name = "TheFunction"
 RemoteFunction.Parent = game.ReplicatedStorage
-TheFunction.OnServerInvoke = function(plr)
+RemoteFunction.OnServerInvoke = function(plr)
     local Isworking = true
   return Isworking
 end
