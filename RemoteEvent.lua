@@ -10,9 +10,7 @@ RemoteEvent.OnServerEvent:Connect(function(player) -- Waits for server event, on
     print("Server triggered by:", player.Name) -- Sends a message on the server side including a variable passed in.
 end)
 
-
 --Client (Local Script)
-
 script.Parent = game.StarterPlayerScripts -- Defines where this script should be (StarterPlayerScripts)
 
 local player = game.Players.LocalPlayer -- Defining the player to a variable
