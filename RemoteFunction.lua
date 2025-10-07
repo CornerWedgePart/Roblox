@@ -1,4 +1,5 @@
 -- Server Script
+script.Parent = game.ServerScriptService
 local RemoteFunction = Instance.new("RemoteFunction")
 RemoteFunction.Name = "TheFunction"
 RemoteFunction.Parent = game.ReplicatedStorage
@@ -10,6 +11,7 @@ end
 
 
 -- Client Script
+script.Parent = game.StarterPlayer.StarterPlayerScripts
 local RemoteFunction = game.ReplicatedStorage:WaitforChild("TheFunction")
 local player = game.Players.LocalPlayer
 local ScreenGui = Instance.new("ScreenGui") -- Defining and Summoning a ScreenGui
