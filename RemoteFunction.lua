@@ -4,8 +4,8 @@ local RemoteFunction = Instance.new("RemoteFunction")
 RemoteFunction.Name = "TheFunction"
 RemoteFunction.Parent = game.ReplicatedStorage
 RemoteFunction.OnServerInvoke = function(plr, backdata)
-    print(plr.Name, "has contacted the server")
-    print("server sending data")
+    print("Server:", plr.Name, "has contacted the server")
+    print("Server: data sent")
   return "OK"
 end
 
@@ -31,10 +31,10 @@ ScreenGui.Parent = player.PlayerGui -- Sets the ScreenGuis Parent to the players
 TextButton.Parent = player.PlayerGui.ClientUI -- Sets the TextButtons Parent to the players gui
 OutputLabel.Parent = player.PlayerGui.ClientUI
 TextButton.Activated:Connect(function() -- When the TextButton is clicked runs the code inside the function
-    print("Server Invokation requested")
+    print("Client: Server Invokation requested")
     local backdata = RemoteFunction:InvokeServer(player)
     OutputLabel.Text = backdata
-    print("data recieved")
+    print("Client: data recieved")
     wait(3)
     backdata = "backdata"
     OutputLabel.Text = backdata
