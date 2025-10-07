@@ -1,3 +1,6 @@
+-- client to server, and server to client via remote function
+
+
 -- Server Script
 script.Parent = game.ServerScriptService
 local RemoteFunction = Instance.new("RemoteFunction")
