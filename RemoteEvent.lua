@@ -1,4 +1,4 @@
--- Simple client to server communication
+-- Simple client to server communication via remote event
 
 --Server (Script)
 script.Parent = game.ServerScriptService -- Defines where this script should be (ServerScriptService)
