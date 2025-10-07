@@ -12,7 +12,7 @@ end
 
 -- Client Script
 script.Parent = game.StarterPlayer.StarterPlayerScripts
-local RemoteFunction = game.ReplicatedStorage:WaitforChild("TheFunction")
+local RemoteFunction = game.ReplicatedStorage:WaitForChild("TheFunction")
 local player = game.Players.LocalPlayer
 local ScreenGui = Instance.new("ScreenGui") -- Defining and Summoning a ScreenGui
 local TextButton = Instance.new("TextButton") -- Defining and Summoning a TextButton
