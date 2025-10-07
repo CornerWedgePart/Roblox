@@ -30,7 +30,7 @@ ScreenGui.Parent = player.PlayerGui -- Sets the ScreenGuis Parent to the players
 TextButton.Parent = player.PlayerGui.ClientUI -- Sets the TextButtons Parent to the players gui
 OutputLabel.Parent = player.PlayerGui.ClientUI
 TextButton.Activated:Connect(function() -- When the TextButton is clicked runs the code inside the function
-local backdata = RemoteFunction:InvokeServer(player)
     print("Server Invokation requested")
+    local backdata = RemoteFunction:InvokeServer(player)
     OutputLabel.Text = backdata
-  end)
+end)
