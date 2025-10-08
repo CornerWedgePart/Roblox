@@ -14,7 +14,7 @@ local subtract = coroutine.create(function() -- Coroutine named subtract
     while true do -- loop
       print("Subtractor:", x - y )  -- subtracts Y from X
       task.wait(0.1) -- you can never be to catious
-      couroutine.yield() -- pauses the couroutine 
+      coroutine.yield() -- pauses the couroutine 
     end
   end)
 
@@ -22,7 +22,7 @@ local multiply = coroutine.create(function() -- Coroutine named multiply
     while true do
       print("Multiplier:", X * Y )  -- multiply X and Y
       task.wait(0.1) -- you can never be to catious
-      couroutine.yeild() -- pauses the couroutine 
+      coroutine.yeild() -- pauses the couroutine 
     end
   end)
 
@@ -30,11 +30,11 @@ local divide = coroutine.create(function() -- Coroutine named Divide
     while true do 
       print("Divider:", X / Y)  -- divide X by Y
       task.wait(0.1) -- you can never be to catious
-      couroutine.yield() -- pauses the couroutine 
+      coroutine.yield() -- pauses the couroutine 
     end
   end)
 
-games.Players.PlayerAdded:Connect(function(player) -- Passes in the player
+game.Players.PlayerAdded:Connect(function(player) -- Passes in the player
     player.Chatted:Connect(function(msg) --Waits and passes player message to local chat
         local chat = string.split(msg," ") -- seperates the text msg using a space in " " into strings
         X = tonumber(chat[1]) -- sets X equal to the first number
