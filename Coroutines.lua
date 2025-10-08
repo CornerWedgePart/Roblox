@@ -49,7 +49,7 @@ game.Players.PlayerAdded:Connect(function(player) -- Passes in the player
         end
         warn("Data given:", X, Y ) -- prints the data inputted via chat msg
         coroutine.resume(add) -- start the adder
-        coroutine.resume(subract) -- start the subtractor
+        coroutine.resume(subtract) -- start the subtractor
         coroutine.resume(multiply) -- start the multiplier
         coroutine.resume(divide) -- start the divider
     end)
