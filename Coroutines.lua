@@ -22,7 +22,7 @@ local multiply = coroutine.create(function() -- Coroutine named multiply
     while true do
       print("Multiplier:", X * Y )  -- multiply X and Y
       task.wait(0.1) -- you can never be to catious
-      coroutine.yeild() -- pauses the couroutine 
+      coroutine.yield() -- pauses the couroutine 
     end
   end)
 
