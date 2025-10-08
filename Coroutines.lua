@@ -12,7 +12,7 @@ local add = coroutine.create(function() -- Coroutine named add
 
 local subtract = coroutine.create(function() -- Coroutine named subtract
     while true do -- loop
-      print("Subtractor:", x - y )  -- subtracts Y from X
+      print("Subtractor:", X - Y )  -- subtracts Y from X
       task.wait(0.1) -- you can never be to catious
       coroutine.yield() -- pauses the couroutine 
     end
