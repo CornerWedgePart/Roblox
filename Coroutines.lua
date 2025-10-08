@@ -56,3 +56,5 @@ game.Players.PlayerAdded:Connect(function(player) -- Passes in the player
 end)
 
 -- Basically coroutines are like side scripts you can run at the same time(not the main thread), very useful.
+
+--Use /Console to view output then chat a message that is like "# #" ( # = a number )
