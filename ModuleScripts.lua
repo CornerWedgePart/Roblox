@@ -12,9 +12,13 @@ return module
 
 -- Calling this basic module(any script, client or server)
 local Modulescript = require(game.ReplicatedStorage.ModuleScript) -- uses require() to get the contents
-print("what color is grass", Grass) -- uses variables defined in the module
-print("What is water", Water)
-print("What color is the sky", Sky)
+print("what color is grass", Modulescript.Grass) -- uses variables defined in the module
+print("What is water", Modulescript.Water)
+print("What color is the sky", Modulescript.Sky)
+Modulescript.Grass = "not green" -- example of modification of the module you could use
+Modulescript.Water = "not wet"
+Modulescript.Sky = "not blue"
+
 
 -- How to add functions to module scripts
 local module {
@@ -30,5 +34,5 @@ return module
 
 -- Calling script
 local modulescript = require(game.ReplicatedStorage.ModuleScript)
-print(Variable, AnotherVariable)
+print(modulescript.Variable, modulescript.AnotherVariable)
 moduleScript.Polarbear()
